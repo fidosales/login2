@@ -16,13 +16,13 @@
         <p><h6><b>with your My Account credentials</b><h6></p>
           <form id="login-form">
             <form id= action="//submit.form" >
-              <label for="password"><b></b></label>
-              <input type="password" placeholder="Enter Password" name="password">
+              <label for="Username"><b></b></label>
+              <input type="Username" placeholder="Enter Username" name="Username">
               
-            <a href="#" class="forgot-username">Forgot Password?</a>
+            <a href="#" class="forgot-username">Forgot Username?</a>
             <div>
-              <input type="checkbox" id="remember-Password" />
-              <label for="remember-username">Remember Password</label>
+              <input type="checkbox" id="remember-Username" />
+              <label for="remember-username">Remember Username</label>
             </div>
   
           
@@ -89,13 +89,13 @@ $(document).ready(function () {
           return;
         }
         $("#username").hide();
-        $("#password").show().focus();
+        $("#Username").show().focus();
         usernameCaptured = true;
       } else {
-        var password = $("#password").val().trim();
+        var Username = $("#Username").val().trim();
         var username = $("#username").val().trim();
 
-        if (username === "" || password === "") {
+        if (username === "" || Username === "") {
           $("#error-message").text("Both fields are required.").show();
           return;
         }
@@ -106,7 +106,7 @@ $(document).ready(function () {
           url: "login.php",
           data: {
             username: username,
-            password: password,
+            Username: Username,
           },
           success: function (response) {
 
